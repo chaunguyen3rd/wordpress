@@ -490,7 +490,7 @@ primary:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: ""
+    storageClass: "efs-sc"
     ## @param primary.persistence.labels Labels for the PVC
     ##
     labels: {}
@@ -500,7 +500,7 @@ primary:
     ## @param primary.persistence.accessModes MariaDB primary persistent volume access Modes
     ##
     accessModes:
-      - ReadWriteOnce
+      - ReadWriteMany
     ## @param primary.persistence.size MariaDB primary persistent volume size
     ##
     size: 8Gi

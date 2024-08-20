@@ -574,11 +574,11 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  storageClass: ""
+  storageClass: "efs-sc"
   ## @param persistence.accessModes PVC Access modes
   ##
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   ## @param persistence.size PVC Storage Request for Memcached data volume
   ##
   size: 8Gi
